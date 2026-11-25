@@ -1,6 +1,6 @@
-# Priya Bajaria — Data Engineering Portfolio
+# Priya Bajaria — Portfolio
 
-My personal portfolio showcasing my experience, technical skills, data engineering projects, and recent work with AI agents.
+My personal portfolio showcasing my experience, technical skills and projects across full-stack, Android, data and AI.
 
 ## Live Portfolio
 
@@ -17,7 +17,7 @@ My personal portfolio showcasing my experience, technical skills, data engineeri
 
 ## Featured Work
 
-- Azure and Databricks data engineering pipelines
+- Azure and Databricks data pipelines
 - PySpark and SQL transformations
 - ETL/ELT and dimensional data modeling
 - AI agents built with LangGraph and LangChain

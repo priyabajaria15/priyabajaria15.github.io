@@ -24,7 +24,7 @@ export function Hero() {
         <div className="hero__cta">
           <a className="btn btn--solid" href="#projects">See my projects</a>
           {data.resume && (
-            <a className="btn" href={data.resume} download>Download Resume</a>
+            <a className="btn" href={data.resume} download="PriyaBajaria_Resume.pdf">Download Resume</a>
           )}
           {data.links.email && (
             <a className="btn" href={`mailto:${data.links.email}`}>Email me</a>

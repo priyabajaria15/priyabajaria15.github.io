@@ -13,15 +13,14 @@ import type { PortfolioData } from "./types";
 export const data: PortfolioData = {
   /* ---------- 1. BASICS ---------- */
   name: "Priya Bajaria",
-  role: "Data Engineer",
+  role: "Computer Science Student",
   location: "Boston, MA",
-  photo: "/profile.jpg",
-  resume: "/resume.pdf",      // add public/resume.pdf, or set to null
+  photo: "/resume_image.jpg",
+  resume: "/PriyaBajaria_Resume.pdf",
 
   tagline:
-    "I build data pipelines, from ingestion through to modeling and " +
-    "orchestration. Currently completing my M.S. in Computer Science at " +
-    "Boston University.",
+    "M.S. Computer Science student at Boston University. I build " +
+    "full-stack web apps, Android apps, data pipelines and AI agents.",
 
   /* ---------- 2. LINKS ---------- */
   links: {
@@ -31,41 +30,46 @@ export const data: PortfolioData = {
   },
 
   /* ---------- 3. ABOUT ---------- */
-about: [
-  "I'm a data engineer focused on turning raw data into reliable, usable datasets. My work includes ingesting data from source systems, cleaning and transforming it with PySpark and Databricks, building star-schema data models, and scheduling pipelines to run reliably.",
+  about: [
+    "I'm a Computer Science graduate student at Boston University, graduating in December 2026. I enjoy building complete products, from the database and APIs to the interface people use.",
 
-  "I've also worked with security telemetry data and recently started exploring the intersection of data engineering and generative AI by building AI agents with LangGraph and LangChain.",
+    "My recent projects include a full-stack journalism marketplace, a native Android marketplace for BU students, a cloud data pipeline on Azure and Databricks, and a multi-agent AI assistant. Before BU, I worked as a security engineer intern and earned my B.Tech. in Information Technology in Mumbai.",
 
-  "I'm based in Boston and currently completing my M.S. in Computer Science at Boston University, graduating in December 2026. I'm always open to discussing data engineering, AI, interesting projects, or new opportunities.",
-],
+    "I'm open to full-time roles starting January 2027.",
+  ],
 
   /* ---------- 4. TECHNICAL SKILLS ---------- */
   skills: [
-    { group: "Languages", items: ["Python", "SQL", "PySpark", "Bash"] },
+    { group: "Languages", items: ["Python", "SQL", "TypeScript", "JavaScript", "Kotlin", "PySpark", "Bash"] },
     {
-      group: "Data engineering",
-      items: ["Apache Airflow", "dbt", "Databricks", "Delta Lake",
-              "Spark Structured Streaming", "Auto Loader"],
+      group: "Web & full-stack",
+      items: ["Next.js", "React", "Node.js", "REST APIs", "Clerk Authentication",
+              "Jest", "React Testing Library"],
     },
     {
-      group: "Azure & cloud",
-      items: ["Azure Data Factory", "ADLS Gen2", "Azure SQL",
-              "Unity Catalog", "Lakeflow Declarative Pipelines"],
+      group: "Android & mobile",
+      items: ["Jetpack Compose", "MVVM", "Room", "Coroutines", "Kotlin Flow", "Retrofit",
+              "CameraX", "ML Kit", "Firebase", "Cloud Firestore", "JUnit"],
     },
     {
-      group: "AI & agents",
-      items: ["LangChain", "LangGraph", "ReAct Agents",
-              "LLM Tool Calling", "Prompt Engineering", "Pydantic"],
+      group: "Data",
+      items: ["Databricks", "Delta Lake", "Spark Structured Streaming", "Auto Loader",
+              "Apache Airflow", "dbt"],
     },
     {
-      group: "Databases & modeling",
-      items: ["PostgreSQL", "Medallion Architecture", "Dimensional Modeling",
-              "SCD Type 2", "CDC"],
+      group: "Databases & cloud",
+      items: ["PostgreSQL", "Azure SQL", "Azure Data Factory", "ADLS Gen2", "Unity Catalog",
+              "Lakeflow", "Medallion Architecture", "SCD Type 2", "CDC"],
     },
     {
       group: "DevOps & tools",
-      items: ["Docker", "Git", "GitHub", "Databricks Asset Bundles",
-              "Jinja2", "Pandas", "Pytest"],
+      items: ["Git", "GitHub Actions", "CI/CD", "Docker", "Databricks Asset Bundles",
+              "ESLint", "Jinja2", "Pandas", "Pytest"],
+    },
+    {
+      group: "AI & agents",
+      items: ["LangChain", "LangGraph", "ReAct Agents", "LLM Tool Calling",
+              "Prompt Engineering", "Pydantic"],
     },
   ],
 
@@ -84,48 +88,42 @@ about: [
       ],
       tech: ["Microsoft Sentinel", "Defender for Endpoint", "EDR", "Log Analysis"],
     },
-    {
-      role: "Data Engineer (Part-Time)",
-      org: "EliteSigma Infotech LLP",
-      start: "Jan 2023",
-      end: "Dec 2024",
-      location: "Ahmedabad, India · Remote",
-      bullets: [
-        "Translated client business requirements into scalable data transformation workflows using PySpark and SQL.",
-        "Developed Databricks notebooks for multiple business use cases, implementing data cleansing, transformation, joins and validation logic.",
-        "Processed source data and loaded transformed outputs into SQL tables for downstream reporting and analysis.",
-        "Automated notebook execution through job orchestration, managing task dependencies and scheduled pipeline runs.",
-      ],
-      tech: ["PySpark", "SQL", "Databricks", "Job Orchestration"],
-    },
   ],
 
   /* ---------- 6. PROJECTS ---------- */
   projects: [
     {
-      title: "Agentic AI Data Assistant",
+      title: "StoryMatch – Freelance Journalism Marketplace",
       blurb:
-        "A multi-agent assistant that routes natural-language requests to specialized SQL and ETL agents. " +
-        "The Text-to-SQL workflow reads database schema context to generate PostgreSQL queries, runs them past " +
-        "an AI safety judge before execution, and returns business-readable insights. A ReAct-based ETL agent " +
-        "pulls from APIs, applies dynamic Pandas transformations, and writes results to CSV. Pydantic state " +
-        "validation, conditional routing, and task-based model selection keep it reliable and hold API costs down.",
-      tech: ["Python", "LangGraph", "LangChain", "PostgreSQL", "Pandas", "Pydantic"],
-      tags: ["AI & Agents", "Python", "SQL"],
-      repo: "https://github.com/priyabajaria15/data-agent",
+        "A full-stack marketplace connecting newsroom editors with freelance journalists. Editors post " +
+        "assignments, search a talent directory and manage rosters; freelancers build profiles and pitch " +
+        "stories. A PostgreSQL-backed REST API enforces organization-scoped permissions, and an admin console " +
+        "handles content moderation and account verification. Tested with Jest and run through GitHub Actions CI.",
+      tech: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Clerk", "Jest", "GitHub Actions"],
+      tags: ["Full-Stack", "TypeScript"],
+      repo: "https://github.com/BU-Spark/se-iij-freelance-marketplace",
       featured: true,
     },
     {
-      title: "Spotify Azure Data Engineering Pipeline",
+      title: "Terrier Trade",
       blurb:
-        "A metadata-driven ADF pipeline that incrementally ingests five Azure SQL tables into ADLS Gen2 using " +
-        "JSON watermark-based CDC, with parameterization, backfills and automated failure alerts. On top of it, " +
-        "a Bronze/Silver/Gold lakehouse built with Auto Loader, Structured Streaming and Delta Lake handles " +
-        "cleansing, deduplication, schema evolution and checkpointing. The Gold layer is a star schema with " +
-        "SCD Type 2 dimensions via Lakeflow Auto CDC, data-quality expectations, and Jinja2-generated reporting " +
-        "views. Unity Catalog governs storage access; CI/CD runs through GitHub branches and Databricks Asset Bundles.",
+        "A native Android marketplace where verified Boston University students buy, sell and exchange items. " +
+        "Includes Firebase email-verified sign-in, real-time Firestore listings with search and filters, " +
+        "messaging, deal negotiation and peer reviews. A Room cache with Kotlin Flow enables offline browsing, " +
+        "and ISBN barcode scanning (CameraX + ML Kit) auto-fills textbook listings from the Open Library API.",
+      tech: ["Kotlin", "Jetpack Compose", "MVVM", "Firebase", "Room", "CameraX", "ML Kit", "Retrofit"],
+      tags: ["Android", "Kotlin"],
+      repo: "https://github.com/terrier-trade/terrier-trade-android",
+    },
+    {
+      title: "Spotify Azure Data Pipeline",
+      blurb:
+        "A metadata-driven cloud pipeline that incrementally ingests five Azure SQL tables into ADLS Gen2 " +
+        "using watermark-based CDC, with backfills and failure alerts. A Bronze/Silver/Gold lakehouse on " +
+        "Databricks handles cleansing, deduplication and schema evolution, feeding a star schema with SCD " +
+        "Type 2 dimensions. Governed with Unity Catalog; CI/CD through GitHub and Databricks Asset Bundles.",
       tech: ["Azure Data Factory", "Databricks", "PySpark", "Delta Lake", "Unity Catalog", "ADLS Gen2"],
-      tags: ["Azure", "Databricks", "Streaming", "SQL"],
+      tags: ["Data", "Cloud", "Python"],
       repo: "https://github.com/priyabajaria15/azure-project",
     },
     {
@@ -139,6 +137,18 @@ about: [
       tech: ["Databricks", "dbt", "Apache Airflow", "PostgreSQL", "Delta Lake", "Docker"],
       tags: ["Databricks", "Orchestration", "SQL"],
       repo: "https://github.com/priyabajaria15/walmart_Airflow_DBT_project",
+    },
+    {
+      title: "Agentic AI Data Assistant",
+      blurb:
+        "A multi-agent Python app built with LangGraph that routes natural-language requests to specialized " +
+        "SQL and ETL agents. The Text-to-SQL workflow uses schema context to generate queries, checks them " +
+        "with an AI safety judge, and returns plain-language insights. A ReAct ETL agent calls REST APIs, " +
+        "transforms data with Pandas and outputs CSVs. Pydantic validation and task-based model selection " +
+        "improve reliability and keep API costs down.",
+      tech: ["Python", "LangGraph", "LangChain", "PostgreSQL", "Pandas", "Pydantic"],
+      tags: ["AI & Agents", "Python"],
+      repo: "https://github.com/priyabajaria15/data-agent",
     },
   ],
 
@@ -163,6 +173,11 @@ about: [
   /* ---------- 8. CERTIFICATIONS ---------- */
   certifications: [
     {
+      name: "Microsoft Certified: Azure Data Fundamentals",
+      issuer: "Microsoft",
+      url: "https://learn.microsoft.com/en-us/users/priyadilipbajaria-0963/credentials/f885d2f2876d45a7",
+    },
+    {
       name: "Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)",
       issuer: "Microsoft",
       url: "https://learn.microsoft.com/en-in/users/priyadilipbajaria-0963/credentials/2f481aea476c15cc",
@@ -184,7 +199,7 @@ about: [
   contact: {
     heading: "Get in touch",
     blurb:
-      "I'm looking for data engineering roles starting December 2026. " +
+      "I'm looking for full-time roles starting January 2027. " +
       "Feel free to reach out. Email is the best way to reach me.",
 
     // Static hosting can't send mail. Leave empty and the form opens the

@@ -466,8 +466,7 @@ kbd {
 
 /* ============================================================
    JUSTIFIED BODY TEXT
-   Flush on both edges. hyphens:auto lets the browser break long
-   words so justification doesn't open up rivers of white space.
+   Flush on both edges. Words are never hyphenated across lines.
    Reverts to left-aligned on narrow screens, where the column is
    too short for justification to look anything but broken.
    ============================================================ */
@@ -479,8 +478,8 @@ kbd {
 .edu__detail {
   text-align: justify;
   text-justify: inter-word;
-  -webkit-hyphens: auto;
-          hyphens: auto;
+  -webkit-hyphens: manual;
+          hyphens: manual;
 }
 
 @media (max-width: 700px) {
@@ -491,8 +490,6 @@ kbd {
   .contact__side p,
   .edu__detail {
     text-align: left;
-    -webkit-hyphens: manual;
-            hyphens: manual;
   }
 }
 
